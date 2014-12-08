@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/extra.css"/>
+        <link rel="icon" href="img/iSchool-logo.png">
+
+        <title>iSchool Capstone Index</title>
+    </head>
+    <body class="container-fluid">
+          <main ng-app="CapstonesList" ng-controller="CapstonesController">
+                <h1 id="titles">Welcome to the Information School Capstones Page</h1>
+                  <section class="row">
+                    <div class="col-md-8">
+                          <h3>Countdown until next Capstone:
+                          <span id="countdown"></span></h3>
+                    </div>
+                    <div class="col-xs-8">
+                      
+                    </div>
+                    <div class="col-md-4">
+                        <p><a href="entry.html" class="btn btn-primary">New Entry</a></p>
+                    </div>
+                  </section>
+                  <hr>
+                  <div class="row">
+                    <div class="form-group">
+                        <label for="category" class="col-sm-2 control-label">Show me</label>
+                        <div class="col-sm-2">
+                            <select name="category" id="category" class="form-control" ng-model="category" ng-change="filter()">
+                                <option value="" selected disabled>Category</option>
+                                <option value="categoryAll">All</option>
+                                <option value="category1">Software</option>
+                                <option value="category2">Wearables</option>
+                                <option value="category3">Health</option>
+                                <option value="category4">Mobile</option>
+                                <option value="category5">Web</option>
+                                <option value="category6">Innovation</option>
+                            </select>
+                        </div>
+
+                        <label for="year" class="col-sm-2 control-label">Projects for</label>
+                        <div class="col-sm-2">
+                            <select name="year" id="year" class="form-control" ng-model="year" ng-change="filter()">
+                                <option value="" selected disabled>Year</option>
+                                <option value="yearAll">All</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                            </select>
+                        </div>
+
+                        <label for="program" class="col-sm-2 control-label">Sorted by</label>
+                        <div class="col-sm-2">
+                            <select name="program" id="program" class="form-control" ng-model="program" ng-change="filter()">
+                                <option value="" selected disabled>Program</option>
+                                <option value="sortedAll">All</option>
+                                <option value="info">INFO</option>
+                                <option value="mlis">MLIS</option>
+                                <option value="msim">MSIM</option>
+                            </select>
+                        </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="tile col-md-4 col-l-3 col-xl-2" ng-repeat="capstone in capstones">
+                      <a href="project.html?={{capstone.objectId}}" id="projectText">
+                          <img class="tiles" src="{{capstone.images1}}">
+                          <h2 id="indexTitles">{{capstone.title}}</h2>
+                          <div class="blurb">
+                            <p>{{capstone.blurb}}&nbsp;</p>
+                          </div>
+                      </a>
+                      <div class="likes">
+                        {{capstone.likes || 0}}
+                        <span class="hover glyphicon glyphicon-thumbs-up" ng-click="incrementLikes(capstone, 1)"></span>
+                      </div>
+                    </div>
+                </div>
+        </main> 
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.2/angular.min.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/app.js"></script>
+</html>
+
+

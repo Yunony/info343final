@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/main.css"/>
+        <link rel="stylesheet" href="css/extra.css"/>
+        <link rel="icon" href="img/iSchool-logo.png">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+
+        <title>Projects Page</title>
+    </head>
+    <body ng-app="CapstonesList" ng-controller="ProjectController">
+        <main class="container" ng-repeat="capstone in capstones">
+            <section id="Name">
+                <div class="row col-xs-8 col-xl-8" id="projectHeader">
+                    <br>
+                    <h1>{{capstone.title}}</h1>
+                    <br>
+                </div>
+                <div class="row col-xs-4 col-xl-4" id="share">
+                    <br>
+                    <h2>Share this Project</h2>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.sharelinkgenerator.com/"><img src="img/Facebook-icon.png" alt="Facebook"/></a>
+                    <a href="https://twitter.com/home?status=Check%20out%20this%20awesome%20project!"><img src="img/Twitter-icon.png" alt="Twitter"/></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.sharelinkgenerator.com/&title=Check%20out%20this%20awesome%20Project!&summary=This%20is%20amazing!&source=UW%20iSchool%20Capstone%20Projects"><img src="img/LinkedIn-icon.png" alt="LinkedIn"/></a>
+                    <a href="https://www.reddit.com/"><img src="img/Reddit-icon.png" alt="Reddit"/></a>
+                    <br>
+
+                </div>
+            </section>
+
+            <section id="Overview">
+                <div class="row col-xs-7 col-xl-7">
+                    <img id="img-main" src="{{capstone.images1}}" alt="Project Banner"/>
+                </div>
+                <div class="row col-xs-1 col-xl-1">
+                    <p></p>
+                </div>
+
+                <section class="gallery">
+                    <div class="row col-xs-8 col-xl-8">
+                        <p></p>
+                        <div class="col-xs-2 col-xl-2">
+                            <img class="img-responsive thumbnail" src="{{capstone.images1}}" alt="Thumb 1" ng-click="changePic(capstone.images1)">
+                        </div>
+                        <div class="col-xs-2 col-xl-2">
+                            <img class="img-responsive thumbnail" src="{{capstone.images2}}" alt="Thumb 2" ng-click="changePic(capstone.images2)" ng-hide="capstone.images2 == null">
+                        </div>
+                        <div class="col-xs-2 col-xl-2">
+                            <img class="img-responsive thumbnail" src="{{capstone.images3}}" alt="Thumb 3" ng-click="changePic(capstone.images3)" ng-hide="capstone.images3 == null">
+                        </div>
+                        <div class="col-xs-2 col-xl-2">
+                            <img class="img-responsive thumbnail" src="{{capstone.images4}}" alt="Thumb 4" ng-click="changePic(capstone.images4)" ng-hide="capstone.images4 == null">
+                        </div>
+                        <div class="col-xs-2 col-xl-2">
+                            <a href="{{capstone.video}}" target="_blank"><img class="img-responsive thumbnail" src="img/video.png" alt="Thumb 5" ng-hide="capstone.video == null"></a>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <div class="description row col-xs-7 col-xl-7">
+                    <h2>Project Description</h2>
+                    <p>{{capstone.description}}</p>   
+                </div>
+            </section>
+
+            <section id="Team">
+                <div class="row col-xs-4 col-xl-4 span6 team">
+                    <p></p>
+                    <h3>Meet the team</h3>
+                    <p></p>
+                      
+                    <div id="teamMember1">
+                        <a target="_blank" href="{{capstone.TeamMemberLinkedIn1}}">
+                            <div class="img-div">
+                                <img src="{{capstone.team1}}" />
+                            </div>
+                       </a>
+                        <h4>{{capstone.TeamMemberName1}}</h4>
+                        <p>{{capstone.TeamMemberPosition1}}</p>
+                    </div>
+
+                    <div id="teamMember2">
+                        <a target="_blank" href="{{capstone.TeamMemberLinkedIn2}}">
+                            <div class="img-div">
+                                <img src="{{capstone.team2}}" />
+                            </div>
+                       </a>
+                        <h4>{{capstone.TeamMemberName2}}</h4>
+                        <p>{{capstone.TeamMemberPosition2}}</p>
+                    </div>
+                    <div id="teamMember3">
+                        <a target="_blank" href="{{capstone.TeamMemberLinkedIn3}}">
+                            <div class="img-div">
+                                <img src="{{capstone.team3}}" />
+                            </div>
+                       </a>
+                        <h4>{{capstone.TeamMemberName3}}</h4>
+                        <p>{{capstone.TeamMemberPosition3}}</p>
+                    </div>
+
+                    <div id="teamMember4">
+                        <a target="_blank" href="{{capstone.TeamMemberLinkedIn4}}">
+                            <div class="img-div">
+                                <img src="{{capstone.team4}}" />
+                            </div>
+                       </a>
+                        <h4>{{capstone.TeamMemberName4}}</h4>
+                        <p>{{capstone.TeamMemberPosition4}}</p>
+                    </div>
+                    <div id="teamMember5">
+                        <a target="_blank" href="{{capstone.TeamMemberLinkedIn5.url}}">
+                            <div class="img-div">
+                                <img src="{{capstone.team5}}" />
+                            </div>
+                       </a>
+                        <h4>{{capstone.TeamMemberName5}}</h4>
+                        <p>{{capstone.TeamMemberPosition5}}</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="js/app.js"></script>
+
+</html>

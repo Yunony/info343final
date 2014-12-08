@@ -1,0 +1,231 @@
+body {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background:#ebebeb;
+    font-family:'Ubuntu', sans-serif;
+    color:#363636;
+    font-size:13px;
+    line-height:1.7em;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    position:relative;
+    height:auto !important;
+    min-height:100%;
+}
+
+#countdown{
+    font-size: 0.5em;
+    color:red;
+}
+
+hr  {
+    color: red;
+}
+
+#wrap {
+
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+#likes {
+    float:right;
+}
+
+.glyphicon:hover {
+  color: #d3a82a;
+  box-shadow: #75b0df;
+}
+
+.btn {
+    float: right;
+    color: #403454;
+    background-color: #d3a82a;
+    border: none;
+}
+
+.btn:hover {
+    color: #403454;
+    background-color: #eabc4b;
+    border: none;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+#projectText {
+    text-decoration: none;
+    color: #000000;
+}
+
+#projectText:hover {
+    opacity: 0.5;
+}
+
+#share, #Description {
+    color:#39275B
+}
+
+#projectDescr {
+    border: none;
+}
+
+#name {
+    font-weight: bold;
+}
+
+#project-description {
+    height: 150px;
+    text-align: left;
+}
+
+#inputPostMessage {
+    height: 100px;
+}
+
+#projectImgDisplay {
+    border-radius: 10px;
+    width: 42em;
+    position: inherit;
+    padding-bottom: 3em;
+}
+
+.description {
+    background-color: white;
+    padding-top: 20px;
+}
+
+
+#projectTextDisplay {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#submitButton {
+    margin-left: 1em;
+}
+
+.hover {
+    cursor: pointer;
+}
+
+
+#img-main {
+    border: 2px solid #FFFFFF;
+}
+
+
+#upperText {
+    background: none;
+}
+
+
+div.img-div{
+    height:200px;
+    width:200px;
+    overflow:hidden;
+    border-radius:50%;
+}
+
+.img-div img{
+    -webkit-transform:translate(-50%);
+    margin-left:100px;
+}
+
+.circle-image{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    display:block;
+    background-position-y:25% 
+}
+
+.team {
+    width : 50px;
+    height : 100px;
+    display : table-cell;
+    vertical-align : middle;
+    border : 2px solid #D7A900;
+    float: none;
+    background-color: #39275B;
+    color: #D7A900;
+}
+
+
+form-group {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.is-error {
+    border: 1px solid #FF0000;
+}
+
+.row-xs-height {
+    display:table-row;
+}
+
+
+img.tiles {
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 100px;
+    float: left;
+    margin: 1px;
+    position: relative;
+}
+
+.blurb {
+    min-height: 90px;
+}
+
+.tile {
+    margin-bottom: 30px;
+}
+
+#indexTitles {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.likes {
+    float: right;
+}
+
+#countdown {
+    font-size: 18px;
+}
+
+#projectHeader {
+    font-size: 20px;
+}
+
+#entryH1 {
+    font-size: 22px;
+}
+
+#entryH2 {
+    font-size: 16px;
+}
